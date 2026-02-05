@@ -14,7 +14,7 @@ connectDB().catch(err => {
 
 // Middleware
 app.use(cors({
-  origin: 'http://localhost:5173', // Frontend URL
+  origin: ['http://localhost:5173', 'https://subscriber.sagealphacapital.com'],// Frontend URL
   credentials: true
 }));
 app.use(express.json());
