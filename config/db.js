@@ -7,7 +7,7 @@ let isConnected = false;
 
 const connectDB = async () => {
   if (isConnected) {
-    console.log('MongoDB already connected');
+    console.log('Sagealpha ai db already connected');
     return;
   }
 
@@ -16,9 +16,9 @@ const connectDB = async () => {
     await mongoose.connect(MONGODB_URI);
 
     isConnected = true;
-    console.log('MongoDB connected successfully');
+    console.log('✅ Sagealpha ai db connected successfully');
   } catch (error) {
-    console.error('MongoDB connection error:', error);
+    console.error('Sagealpha ai db connection error:', error);
     isConnected = false;
     throw error;
   }
